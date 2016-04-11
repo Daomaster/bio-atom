@@ -1,0 +1,33 @@
+nav(class="navbar navbar-static-top")
+  div(class="container-fluid") 
+    div(class="navbar-header" id="brand" )
+      a(class="navbar-brand" id="brand-img" href="#/")
+        img(src="assets/images/logo.jpg" alt="Brand")
+        
+    
+    div(class="collapse navbar-collapse" id="bs-example-navbar-collapse-6")
+      ul(class="nav navbar-nav navbar-right" id="menu")
+        li(uib-dropdown dropdown-append-to-body style="padding-top: 40px;")
+          a(href="#/" uib-dropdown-toggle class="menu-text") 试剂消耗
+          ul(class="dropdown-menu menu-drop" uib-dropdown-menu aria-labelledby="simple-dropdown")
+            li(ng-repeat="product in products") 
+              a(href="#/product") {{product.title}}
+            
+        li(uib-dropdown dropdown-append-to-body style="padding-top: 40px;")
+          a(href="#/" uib-dropdown-toggle class="menu-text") 技术支持
+          ul(class="dropdown-menu menu-drop" uib-dropdown-menu aria-labelledby="simple-dropdown")
+            li(ng-repeat="service in services") 
+              a(href="#/product") {{service.title}}
+        
+        li(uib-dropdown dropdown-append-to-body style="padding-top: 40px;") 
+          a(href="#/" uib-dropdown-toggle class="menu-text") 关于我们
+          ul(class="dropdown-menu menu-drop" uib-dropdown-menu aria-labelledby="simple-dropdown")
+            li(ng-repeat="info in infos") 
+              a(href="#/product") {{info.title}}
+        
+        li(uib-dropdown dropdown-append-to-body style="padding-top: 40px;") 
+          a(href="#/" uib-dropdown-toggle class="menu-text") 客服服务
+          
+        
+          
+        
